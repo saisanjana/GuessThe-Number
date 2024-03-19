@@ -30,7 +30,11 @@ function calculateAnswer(){
     console.log(resultHelper)
     let result = parseInt(resultHelper.join(''),2)
     if(result){
-        resultNumber.innerText = result;
+        if(result>100){
+        resultNumber.innerText = 'You did not think of number in between 1-100 right??'
+        }else{
+            resultNumber.innerText = result;
+        }
     }else{
         resultNumber.innerText = 'You made me a fool, you didn\'t think of any number'
     }
