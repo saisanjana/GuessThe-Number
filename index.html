@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic!</title>
+    <script src="./index.js" defer></script>
+    <link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="play">
+    <div id="home">
+        <div id="initialPageMsg">Think of a number between 1 to 100, and I will guess it!</div>
+        <button id="initailPageBtn" onClick="goToNextPage()">Let's start</button>
+    </div>
+    
+    <div id="page">
+        <div> Is your number present here? </div>
+        <div id="pageNumbers"></div>
+        <div>
+            <button id="pageYes" onClick="updateResultHelper(true)">Yes</button>
+            <button id="pageNo" onClick="updateResultHelper(false)">No</button>
+        </div>  
+    </div>
+    <div id="result">
+        <div>The number you thought was:</div>
+        <div id="resultNumber"></div>
+        <button id="restart" onClick="restartGame()">Restart</button>
+    </div>
+    </div>
+   
+    
+</body>
+</html>

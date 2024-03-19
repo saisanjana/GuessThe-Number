@@ -1,0 +1,112 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: 5vh;
+}
+#page{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    overflow-x:hidden;
+}
+#pageNumbers{
+    white-space: normal;
+    word-wrap: break-word;
+    width: 50%;
+    margin-left:22vw;
+    margin-right: 22vw;
+    line-height: 1.9;
+}
+#result{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#initailPageBtn{
+    height: 10vh;
+    margin-top: 10vh;
+    width: 10vw;
+    font-size: 3vh;
+    border-radius: 10%;
+}
+ #pageYes{
+    height: 8vh;
+    margin-top: 8vh;
+    width: 10vw;
+    font-size: 2.8vh;
+    border-radius: 10%;
+ }
+ #pageYes:hover{
+    height:8.5vh;
+    width: 10.5vw;
+ }
+ #pageNo{
+    height: 8vh;
+    margin-top: 8vh;
+    width: 10vw;
+    font-size: 2.8vh;
+    border-radius: 10%;
+ }
+ #pageNo:hover{
+    height:8.5vh;
+    width: 10.5vw;
+ }
+
+ #restart{
+    height: 10vh;
+    margin-top: 10vh;
+    width: 10vw;
+    font-size: 3vh;
+    border-radius: 10%;
+ }
+ /* #play{
+    border-color: white;
+    border: 20px;
+    margin: 50px;
+ } */
+
+ @media screen and (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+    body {
+        font-size: 3.5vh; /* Adjust font size for smaller screens */
+    }
+
+    #pageNumbers {
+        width: 90%;
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
+    #initailPageBtn,
+    #pageYes,
+    #pageNo,
+    #restart {
+        height: 8vh;
+        margin-top: 3vh;
+        width: 30vw;
+        font-size: 2.5vh;
+    }
+
+    #pageYes:hover,
+    #pageNo:hover {
+        height: 8.5vh;
+        width: 31vw;
+    }
+}
+
+
+
+
