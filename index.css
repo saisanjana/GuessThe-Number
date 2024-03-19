@@ -2,7 +2,6 @@ body{
     background-color: black;
     color: white;
     font-size: 5vh;
-    overflow: hidden;
 }
 #page{
     display: none;
@@ -118,7 +117,8 @@ body{
         margin: 0 auto;
     }
     #home,
-    #result{
+    #result,
+    #page{
         text-align: center;
     }
 
