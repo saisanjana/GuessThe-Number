@@ -2,6 +2,7 @@ body{
     background-color: black;
     color: white;
     font-size: 5vh;
+    overflow: hidden;
 }
 #page{
     display: none;
@@ -80,6 +81,30 @@ body{
  button{
     color:black
  }
+ .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    z-index: -1;
+}
+
+.stars::before {
+    content: "★"; /* Unicode character for star */
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+    animation: blinkStars 1s linear infinite alternate;
+}
+
+@keyframes blinkStars {
+    0% {
+        opacity: 0.2; /* Adjust the opacity as desired */
+    }
+    100% {
+        opacity: 0.6; /* Adjust the opacity as desired */
+    }
+}
 
  @media screen and (max-width: 768px) {
     /* Styles for screens smaller than 768px */
@@ -91,6 +116,10 @@ body{
         width: 90%;
         max-width: 80vw;
         margin: 0 auto;
+    }
+    #home,
+    #result{
+        text-align: center;
     }
 
     #initailPageBtn,

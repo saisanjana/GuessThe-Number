@@ -1,3 +1,24 @@
+const numStars = 25; // Number of stars
+
+// Function to generate stars
+function generateStars() {
+    const starsContainer = document.querySelector('.stars');
+    while (starsContainer.firstChild) {
+        starsContainer.removeChild(starsContainer.firstChild);
+    }
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('stars');
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        starsContainer.appendChild(star);
+    }
+}
+
+// Call the function to generate stars when the page loads
+generateStars();
+
+
 let maxNumber = 100;
 let maxLengthOFMaxNumber = maxNumber.toString(2).length;
 let pages = {};
@@ -44,7 +65,7 @@ function calculateAnswer(){
 function updatePageDataInHTML(){
     let numbers = pages[pageIndex];
     let pageNumbersNode  = document.getElementById("pageNumbers");
-    pageNumbersNode.innerText = numbers;
+    pageNumbersNode.innerText = numbers.join(', ');
 
 }
 
@@ -100,6 +121,7 @@ function restartGame(){
 }
 
 function goToNextPage(){
+    generateStars();
     pageIndex +=1;
     if(pageIndex === (maxLengthOFMaxNumber +1)){
         calculateAnswer();
