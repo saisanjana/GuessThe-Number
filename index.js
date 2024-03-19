@@ -45,12 +45,14 @@ function updatePageDataInHTML(){
 }
 
 function updateResultHelper(flag){
-    if(flag){
-        resultHelper.push(1);
-    }else{
-        resultHelper.push(0);
+    if(resultHelper.length < pageIndex){
+        if(flag){
+            resultHelper.push(1);
+        }else{
+            resultHelper.push(0);
+        }
+        goToNextPage();
     }
-    goToNextPage();
 }
 
 function activateYesOrNoButtons(activate){
